@@ -1,13 +1,17 @@
-//Importamos este componente para poder manejar el router
+// Componentes de React
 import { Route, Switch } from 'react-router-dom';
-// importamos useEffect además de useState
 import { useEffect, useState } from 'react';
-// Importamos el servicio del local storage
+// Local storage
 import ls from '../services/local-storage';
-// Importamos las hojas de estilo
+// Hojas de estilo
 import '../styles/core/Reset.scss';
 import '../styles/core/Variables.scss';
 import '../styles/App.scss';
+// Componentes
+import Filters from './Filters';
+import CharacterList from './CharacterList';
+import CharacterDetail from './CharacterDetail';
+
 
 function App() {
   return (
@@ -17,26 +21,11 @@ function App() {
       </header>
       <main className="main">
         <form className="form">
-          <input className="form__input" type="text" placeholder="Introduce tu búsqueda" />
+          <Filters />
         </form>
-        <ul className="list">
-          <li className="list__element">
-            <img className="list__element--img" src="" alt="imagen" />
-            <div className="list__element--text">
-              <p></p>
-              <p></p>
-            </div>
-          </li>
-        </ul>
-        <section className="detail">
-          <img className="detail__img" src="" alt="imagen" />
-          <div className="detail__text">
-            <p></p>
-            <p></p>
-          </div>
-        </section>
+        <CharacterList />
+        <CharacterDetail />
       </main>
-      <h1>Hola Mundo</h1>
       {/* <Switch>
         <Route path=''>
           //Contenido del componente correspondiente
