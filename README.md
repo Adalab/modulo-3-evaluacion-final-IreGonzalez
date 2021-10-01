@@ -6,8 +6,8 @@
     con un solo click.
 
     Para su ejecución he utilizado a través del Visual Studio Code las tecnologías
-     de Java Script, Html y SCSS intentando en todo momento escribir un código
-      limpio y bien estructurado.
+    de Java Script, Html y SCSS intentando en todo momento escribir un código
+    limpio y bien estructurado.
 
     Espero que te resulte interesante navegar a través de la web.
 
