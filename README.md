@@ -5,7 +5,7 @@
     criterios además de poder ampliar la info de tus personajes favoritos
     con un solo click.
 
-    Para su ejecución he utilizado a través del Visual Studio Code las tecnologías
+    Para su ejecución he utilizado, a través del Visual Studio Code, las tecnologías
     de Java Script, Html y SCSS intentando en todo momento escribir un código
     limpio y bien estructurado.
 

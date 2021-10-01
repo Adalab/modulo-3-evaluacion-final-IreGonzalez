@@ -9,12 +9,33 @@ import '../styles/core/Reset.scss';
 import '../styles/core/Variables.scss';
 import '../styles/App.scss';
 
-
-
-
 function App() {
   return (
     <div className="App">
+      <header className="header">
+        <img src="" alt="Rick and Morty" />
+      </header>
+      <main className="main">
+        <form className="form">
+          <input className="form__input" type="text" placeholder="Introduce tu búsqueda" />
+        </form>
+        <ul className="list">
+          <li className="list__element">
+            <img className="list__element--img" src="" alt="imagen" />
+            <div className="list__element--text">
+              <p></p>
+              <p></p>
+            </div>
+          </li>
+        </ul>
+        <section className="detail">
+          <img className="detail__img" src="" alt="imagen" />
+          <div className="detail__text">
+            <p></p>
+            <p></p>
+          </div>
+        </section>
+      </main>
       <h1>Hola Mundo</h1>
       {/* <Switch>
         <Route path=''>
