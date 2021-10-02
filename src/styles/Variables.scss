@@ -1,0 +1,12 @@
+// fonts
+
+// colors
+$electricBlue: rgb(0, 195, 255);
+$electricGreen: rgb(9, 255, 0);
+
+// mixins
+@mixin flexColumnCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

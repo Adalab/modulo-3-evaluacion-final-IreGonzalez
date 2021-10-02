@@ -1,0 +1,11 @@
+
+.form__input {
+    padding: 5px;
+    height: 30px;
+    margin: 10px;
+    background-color: rgb(5, 160, 0);
+    border-radius: 10px;
+    &::placeholder{
+        color: rgb(0, 195, 255);
+    };
+}

@@ -1,4 +1,5 @@
-
+import '../styles/Variables.scss';
+import '../styles/Filters.scss';
 
 const Filters = () => {
     return (

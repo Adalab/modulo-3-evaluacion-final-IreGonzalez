@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react';
 import callToApi from '../services/api.js'
 import ls from '../services/local-storage';
 // HOJAS DE ESTILO
-import '../styles/core/Reset.scss';
-import '../styles/core/Variables.scss';
+import '../styles/Reset.scss';
+import '../styles/Variables.scss';
 import '../styles/App.scss';
 // IMAGES
 import title from '../images/Rick_and_Morty_-_logo_(English).png'
@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <img src={title} alt="Rick and Morty" />
+        <img className="header__img" src={title} alt="Rick and Morty" />
       </header>
       <main className="main">
         <form className="form">

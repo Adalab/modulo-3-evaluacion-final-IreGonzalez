@@ -1,6 +1,29 @@
 
-.App{
+body{
     background-color: black;
-    display: grid;
-    
+    height: 100vh;
+}
+
+.header{
+    // @include flexColumnCenter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__img{
+        transform: scale(50%);
+    }
+}
+
+.main{
+    // @include flexColumnCenter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form{
+    // @include flexColumnCenter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
