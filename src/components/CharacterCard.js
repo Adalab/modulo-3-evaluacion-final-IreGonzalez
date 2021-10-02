@@ -1,14 +1,19 @@
 
 
-const CharacterCard = () => {
+const CharacterCard = (props) => {
+    console.log(props);
     return (
-        <li className="list__element">
-            <img className="list__element--img" src="" alt="imagen" />
+        <>
+            <img className="list__element--img"
+                src={props.characterData.photo}
+                alt={props.characterData.name}
+                title={props.characterData.name}
+            />
             <div className="list__element--text">
-                <p></p>
-                <p></p>
+                <h2>{props.characterData.name}</h2>
+                <p>Especie : {props.characterData.species}</p>
             </div>
-        </li>
+        </>
     );
 };
 

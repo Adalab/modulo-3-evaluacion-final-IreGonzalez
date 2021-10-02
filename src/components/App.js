@@ -26,6 +26,7 @@ function App() {
   }, [])
 
 
+
   return (
     <div className="App">
       <header className="header">
@@ -35,7 +36,7 @@ function App() {
         <form className="form">
           <Filters />
         </form>
-        <CharacterList />
+        <CharacterList list={data} />
         <CharacterDetail />
       </main>
       {/* <Switch>
