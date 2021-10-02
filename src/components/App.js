@@ -8,6 +8,8 @@ import ls from '../services/local-storage';
 import '../styles/core/Reset.scss';
 import '../styles/core/Variables.scss';
 import '../styles/App.scss';
+// IMAGES
+import title from '../images/Rick_and_Morty_-_logo_(English).png'
 // COMPONENTES
 import Filters from './Filters';
 import CharacterList from './CharacterList';
@@ -30,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <img src="" alt="Rick and Morty" />
+        <img src={title} alt="Rick and Morty" />
       </header>
       <main className="main">
         <form className="form">
