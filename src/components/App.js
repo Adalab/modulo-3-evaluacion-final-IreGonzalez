@@ -1,19 +1,31 @@
-// Componentes de React
+// HOOCKS????
 import { Route, Switch } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-// Local storage
+// SERVIVICIOS
+import callToApi from '../services/api.js'
 import ls from '../services/local-storage';
-// Hojas de estilo
+// HOJAS DE ESTILO
 import '../styles/core/Reset.scss';
 import '../styles/core/Variables.scss';
 import '../styles/App.scss';
-// Componentes
+// COMPONENTES
 import Filters from './Filters';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
 
 
 function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    callToApi()
+      .then(initialData => {
+        console.log(initialData);
+        setData(initialData)
+      });
+  }, [])
+
+
   return (
     <div className="App">
       <header className="header">

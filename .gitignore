@@ -1,6 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 /evaluacion-modulo-3-criterios.ods
 /enunciado.pdf
+/.~lock.evaluacion-modulo-3-criterios.odf#
 
 # dependencies
 /node_modules
