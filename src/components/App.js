@@ -18,6 +18,7 @@ import CharacterDetail from './CharacterDetail';
 
 function App() {
   const [data, setData] = useState([]);
+  const [inputName, setInputName] = useState('');
 
   useEffect(() => {
     callToApi()
@@ -25,9 +26,14 @@ function App() {
         console.log(initialData);
         setData(initialData)
       });
-  }, [])
+  }, []);
 
-
+  const handleInput = (ev) => {
+    ev.preventDefault()
+    setInputName(ev.currentTarget.value)
+  };
+  const filteredData = data
+    .filter((character) => character.name.toLocaleLowerCase().includes(inputName.toLocaleLowerCase()));
 
   return (
     <div className="App">
@@ -36,9 +42,9 @@ function App() {
       </header>
       <main className="main">
         <form className="form">
-          <Filters />
+          <Filters value={inputName} handleInput={handleInput} />
         </form>
-        <CharacterList list={data} />
+        <CharacterList list={filteredData} />
         <CharacterDetail />
       </main>
       {/* <Switch>
