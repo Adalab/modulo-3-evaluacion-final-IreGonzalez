@@ -1,9 +1,20 @@
+// STYLESHEET
 import '../styles/Variables.scss';
 import '../styles/Filters.scss';
+// COMPONENTS
+import Input from './Input';
+import Select from './Select';
 
-const Filters = () => {
+const Filters = (props) => {
     return (
-        <input className="form__input" type="text" placeholder="Introduce tu búsqueda" />
+        <>
+            <Input value={props.inputName} handleInput={props.handleInput} />
+            <Select
+                select={props.select}
+                handleSelect={props.handleSelect}
+                filteredData={props.filteredData}
+            />
+        </>
     );
 };
 

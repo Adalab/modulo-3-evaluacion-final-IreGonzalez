@@ -7,7 +7,7 @@ const callToApi = () => {
             .then(list => {
                 return (list.results.map(character => {
                     return {
-                        id: parseInt(character.id),
+                        id: character.id,
                         photo: character.image,
                         name: character.name,
                         species: character.species,
