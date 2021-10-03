@@ -18,6 +18,7 @@ import CharacterDetail from './CharacterDetail';
 function App() {
   const [data, setData] = useState([]);
   const [inputName, setInputName] = useState('');
+  const [select, setSelect] = useState('all');
 
   useEffect(() => {
     callToApi()
@@ -30,12 +31,22 @@ function App() {
     ev.preventDefault()
     setInputName(ev.currentTarget.value)
   };
+  const handleSelect = (ev) => {
+    ev.preventDefault()
+    setSelect(ev.currentTarget.value)
+  }
 
   const routeData = useRouteMatch("/character/:id");
   const characterId = (routeData !== null ? routeData.params.id : '');
   const characterDetail = data.find((character) => character.id === characterId);
 
-  const filteredData = data.filter((character) => character.name.toLocaleLowerCase().includes(inputName.toLocaleLowerCase()));
+  const filteredData = data
+    .filter((character) => character.name.toLocaleLowerCase().includes(inputName.toLocaleLowerCase()))
+    .filter((character) =>
+      select === 'all' ||
+      select === character.species ||
+      select === character.gender ||
+      select === character.status);
 
 
   return (
@@ -47,7 +58,13 @@ function App() {
         <Switch>
           <Route exact path="/">
             <form className="form">
-              <Filters value={inputName} handleInput={handleInput} />
+              <Filters
+                inputName={inputName}
+                handleInput={handleInput}
+                select={select}
+                handleSelect={handleSelect}
+                filteredData={filteredData}
+              />
             </form>
             <CharacterList list={filteredData} />
           </Route>

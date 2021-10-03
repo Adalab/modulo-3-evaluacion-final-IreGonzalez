@@ -7,7 +7,6 @@ import '../styles/CharacterList.scss';
 const CharacterList = (props) => {
     const html = props.list.map(
         (characterData) => {
-            console.log(props.list.length);
             if (props.list.length === 0) {
                 return (
                     <section className="alternative">
@@ -18,7 +17,10 @@ const CharacterList = (props) => {
             }
             else {
                 return (
-                    <CharacterCard characterData={characterData} key={characterData.id} />
+                    <CharacterCard
+                        characterData={characterData}
+                        key={characterData.id}
+                    />
                 )
             }
         });
