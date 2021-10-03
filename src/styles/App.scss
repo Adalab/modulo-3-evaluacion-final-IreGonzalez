@@ -10,7 +10,13 @@ body{
     flex-direction: column;
     align-items: center;
     &__img{
-        transform: scale(50%);
+        transform: scale(80%);
+        @media (min-width: 768px){
+            transform: scale(100%);
+        }
+        @media (min-width: 1200px){
+            transform: scale(120%);
+        }
     }
 }
 

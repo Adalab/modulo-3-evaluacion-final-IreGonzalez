@@ -1,3 +1,4 @@
+// STYLESHEET
 import '../styles/Variables.scss';
 import '../styles/Filters.scss';
 

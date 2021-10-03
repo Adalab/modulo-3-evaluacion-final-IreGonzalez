@@ -1,18 +1,27 @@
-// COMPONENTES
+// COMPONENTS
 import CharacterCard from './CharacterCard'
-// HOJAS DE ESTILO
+// STYLESHEET
 import '../styles/Variables.scss';
 import '../styles/CharacterList.scss';
 
 const CharacterList = (props) => {
-    const html = props.list.map((characterData) => {
-        console.log(characterData);
-        return (
-            <CharacterCard characterData={characterData} />
-        )
-
-    });
-
+    const html = props.list.map(
+        (characterData) => {
+            console.log(props.list.length);
+            if (props.list.length === 0) {
+                return (
+                    <section className="alternative">
+                        <h2>¡¡Eh!!</h2>
+                        <p> ¡¡Esta no es su serie!!</p>
+                    </section>
+                )
+            }
+            else {
+                return (
+                    <CharacterCard characterData={characterData} key={characterData.id} />
+                )
+            }
+        });
     return (
         <ul className="list">
             {html}
