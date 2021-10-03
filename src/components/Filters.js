@@ -1,16 +1,12 @@
 // STYLESHEET
 import '../styles/Variables.scss';
 import '../styles/Filters.scss';
+// COMPONENTS
+import Input from './Input'
 
 const Filters = (props) => {
     return (
-        <input
-            className="form__input"
-            type="text"
-            placeholder="Introduce tu búsqueda"
-            value={props.value}
-            onChange={props.handleInput}
-        />
+        <Input value={props.value} handleInput={props.handleInput} />
     );
 };
 
