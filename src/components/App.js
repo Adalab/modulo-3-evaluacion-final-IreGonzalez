@@ -38,16 +38,16 @@ function App() {
 
   const handleSelectGender = (ev) => {
     setSelectGender(ev.currentTarget.value)
-  }
+  };
   const handleSelectSpecies = (ev) => {
     setSelectSpecies(ev.currentTarget.value)
-  }
+  };
   const handleSelectOrigin = (ev) => {
     setSelectOrigin(ev.currentTarget.value)
-  }
+  };
   const handleSelectStatus = (ev) => {
     setSelectStatus(ev.currentTarget.value)
-  }
+  };
 
   // LIST TO OPTIONS
   const genderList = data.map((c) => c.gender);
@@ -76,11 +76,13 @@ function App() {
   const filteredData = data
     .filter((character) => character.name.toLocaleLowerCase().includes(inputName.toLocaleLowerCase()))
     .filter((character) =>
-      selectGender === 'all' ||
-      selectGender === character.gender ||
-      selectSpecies === character.species ||
-      selectOrigin === character.status ||
-      selectStatus === character.origin);
+      selectGender === 'all' || selectGender === character.gender)
+    .filter((character) =>
+      selectSpecies === 'all' || selectSpecies === character.species)
+    .filter((character) =>
+      selectOrigin === 'all' || selectOrigin === character.origin)
+    .filter((character) =>
+      selectStatus === 'all' || selectStatus === character.status)
 
   return (
     <div className="App">
@@ -93,7 +95,6 @@ function App() {
             <Filters
               inputName={inputName}
               handleInput={handleInput}
-              filteredData={filteredData}
               genderUniqueList={genderUniqueList}
               selectGender={selectGender}
               handleSelectGender={handleSelectGender}
