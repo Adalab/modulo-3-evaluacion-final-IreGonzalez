@@ -1,12 +1,12 @@
+@import 'Variables.scss';
+
 .list__element{
     width: 320px;
     border: solid 1px rgb(5, 160, 0);
     border-radius: 10px;
     margin-bottom: 15px;
-    // @include flexColumnCenter;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexColumnCenter;
+
     @media (min-width: 768px){
         grid-column: span 1;
         margin: auto;

@@ -38,7 +38,8 @@ function App() {
 
   const routeData = useRouteMatch("/character/:id");
   const characterId = (routeData !== null ? routeData.params.id : '');
-  const characterDetail = data.find((character) => character.id === characterId);
+  console.log(characterId);
+  const characterDetail = data.find((character) => character.id === parseInt(characterId));
 
   const filteredData = data
     .filter((character) => character.name.toLocaleLowerCase().includes(inputName.toLocaleLowerCase()))
