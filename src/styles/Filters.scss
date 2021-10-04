@@ -2,5 +2,11 @@
 
 .form{
     @include flexColumnCenter;
-
+    @media (min-width: 768px){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width:1200px){
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }

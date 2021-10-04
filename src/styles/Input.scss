@@ -5,5 +5,14 @@
 color: $electricBlue;
     &::placeholder{
         color: $electricBlueLight;
-    };
+    }
+    @media (min-width: 768px){
+        grid-column: span 2;
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+    }
+    @media (min-width:1200px){
+        grid-column: span 4;
+    }
 }
