@@ -2,17 +2,14 @@ import { Link } from "react-router-dom";
 // STYLESHEET
 import '../styles/Variables.scss';
 import '../styles/CharacterDetail.scss';
+import Alternative from "./Alternative";
 
 
 const CharacterDetail = (props) => {
     console.log(props.characterData);
     if (props.characterData === undefined) {
         return (
-            <section className="alternative">
-                <h2>¡¡Eh!!</h2>
-                <p> ¡¡¡¡Mete unos datos que sean correctos!!!!</p>
-                <Link to="/"><i className="fas fa-level-up-alt" /></Link>
-            </section>
+            <Alternative />
         )
     }
     else {

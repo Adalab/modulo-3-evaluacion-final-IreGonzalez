@@ -2,13 +2,13 @@
 
 .list__element{
     width: 320px;
-    border: solid 1px $electricGreenDark;
+    border: solid 3px $electricGreenDark;
     border-radius: 10px;
     margin-bottom: 15px;
     @include flexColumnCenter;
     &:hover{
-        border: solid 1px $electricGreenYellow;
-        color: $electricGreenYellow;
+        background: $greenBackground;
+        border: solid 3px $electricGreenYellow;
         font-weight:bold;
     }
 
@@ -23,6 +23,9 @@
        color: $electricGreen;
        margin-bottom: 10px;
        text-align: center;
+       &:hover{
+        color: $electricGreenYellow;
+       }
     }
 }
 .name{

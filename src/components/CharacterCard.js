@@ -2,6 +2,7 @@
 import '../styles/Variables.scss';
 import '../styles/CharacterCard.scss';
 import { Link } from 'react-router-dom';
+import Alternative from './Alternative';
 
 const CharacterCard = (props) => {
     let status = "";
@@ -10,10 +11,7 @@ const CharacterCard = (props) => {
     }
     if (props.characterData === undefined) {
         return (
-            <section className="alternative">
-                <h2>¡¡Eh!!</h2>
-                <p> ¡¡¡¡Mete unos datos que sean correctos!!!!</p>
-            </section>
+            <Alternative />
         )
     }
     else {

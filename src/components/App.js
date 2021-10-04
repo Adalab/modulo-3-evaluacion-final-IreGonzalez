@@ -13,6 +13,7 @@ import title from '../images/Rick_and_Morty_-_logo_(English).png'
 import Filters from './Filters';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
+import Alternative from './Alternative.js';
 
 
 function App() {
@@ -112,10 +113,7 @@ function App() {
             <CharacterDetail characterData={characterDetail} />
           </Route>
           <Route>
-            <section className="alternative">
-              <h2>¡¡Eh!!</h2>
-              <p>¡¡Mete unos datos que sean correctos!!</p>
-            </section>
+            <Alternative />
           </Route>
         </Switch>
       </main>

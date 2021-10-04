@@ -11,14 +11,15 @@ body{
         margin-bottom: 50px;
     }
     &__img{
-        transform: scale(80%);
-        @media (min-width: 768px){
-            transform: scale(100%);
-        }
-        @media (min-width: 1200px){
-            transform: scale(120%);
-        }
+    transform: scale(80%);
+    @media (min-width: 768px){
+        transform: scale(100%);
     }
+    @media (min-width: 1200px){
+        margin-top: 30px;
+        transform: scale(120%);
+    }
+}
 }
 
 .main{
@@ -34,8 +35,4 @@ body{
     border-top: solid 1px $electricGreenDark;
     color: $electricBlueLight;
     text-align: right;
-}
-
-.alternative{
-    @include alternative;
 }

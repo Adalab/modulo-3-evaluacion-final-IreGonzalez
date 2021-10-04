@@ -3,6 +3,7 @@ import CharacterCard from './CharacterCard'
 // STYLESHEET
 import '../styles/Variables.scss';
 import '../styles/CharacterList.scss';
+import Alternative from './Alternative';
 
 const CharacterList = (props) => {
     const html = props.list.map(
@@ -17,10 +18,7 @@ const CharacterList = (props) => {
     if (props.list.length === 0) {
         console.log(props.list.length);
         return (
-            <section className="alternative">
-                <h2>¡¡Eh!!</h2>
-                <p>¡¡Mete unos datos que sean correctos!!</p>
-            </section>
+            <Alternative />
         )
     }
     return (

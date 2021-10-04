@@ -1,0 +1,11 @@
+@import 'Variables.scss';
+
+.alternative{
+    @include alternative;
+    &__insult{
+        font-size: 80px;
+    }
+    &__text{
+        font-size: 50px ;
+    }
+}

@@ -6,6 +6,7 @@ $electricGreen: rgb(9, 255, 0);
 $electricGreenDark: rgb(5, 160, 0);
 $electricBlueLight: rgb(175, 236, 255);
 $electricGreenYellow: rgb(123, 255, 0);
+$greenBackground:rgb(5, 61, 3);
 
 // mixins
 @mixin flexColumnCenter{
@@ -32,7 +33,7 @@ $electricGreenYellow: rgb(123, 255, 0);
 
 @mixin alternative{
     margin: 10px;
-    font-size: 50px;
+    padding: 10px;
     text-align: center;
     border: solid 2px $electricGreenDark;
     color: $electricBlue;
