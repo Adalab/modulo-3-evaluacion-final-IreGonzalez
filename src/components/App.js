@@ -3,6 +3,7 @@ import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 // SERVIVICES
 import callToApi from '../services/api.js'
+import ls from '../services/local-storage'
 // STYLESHEET
 import '../styles/Reset.scss';
 import '../styles/Variables.scss';
@@ -27,18 +28,23 @@ function App() {
       });
   }, []);
 
+
+
   const handleInput = (ev) => {
     ev.preventDefault()
     setInputName(ev.currentTarget.value)
   };
+
   const handleSelect = (ev) => {
-    ev.preventDefault()
     setSelect(ev.currentTarget.value)
   }
 
+
+
   const routeData = useRouteMatch("/character/:id");
   const characterId = (routeData !== null ? routeData.params.id : '');
-  const characterDetail = data.find((character) => character.id === characterId);
+  const characterDetail = data
+    .find((character) => character.id === parseInt(characterId));
 
   const filteredData = data
     .filter((character) => character.name.toLocaleLowerCase().includes(inputName.toLocaleLowerCase()))
@@ -49,6 +55,7 @@ function App() {
       select === character.status);
 
 
+
   return (
     <div className="App">
       <header className="header">
@@ -57,15 +64,13 @@ function App() {
       <main className="main">
         <Switch>
           <Route exact path="/">
-            <form className="form">
-              <Filters
-                inputName={inputName}
-                handleInput={handleInput}
-                select={select}
-                handleSelect={handleSelect}
-                filteredData={filteredData}
-              />
-            </form>
+            <Filters
+              inputName={inputName}
+              handleInput={handleInput}
+              select={select}
+              handleSelect={handleSelect}
+              filteredData={filteredData}
+            />
             <CharacterList list={filteredData} />
           </Route>
           <Route path="/character/:id">
@@ -78,6 +83,10 @@ function App() {
           </Route>
         </Switch>
       </main>
+      <footer className="footer">
+        <h6>&copy;2021</h6>
+        <h6>By IreGonzalez To Adalab</h6>
+      </footer>
     </div >
   );
 }

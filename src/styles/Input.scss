@@ -1,0 +1,9 @@
+@import 'Variables.scss';
+
+.input {
+@include filters;
+color: $electricBlue;
+    &::placeholder{
+        color: $electricBlueLight;
+    };
+}

@@ -1,3 +1,16 @@
+@import 'Variables.scss';
+
 .label{
-    color: grey;
+@include filters;
+    color: $electricBlue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.select{
+    background-color: $electricGreenDark;
+    text-align: end;
+    &:hover{
+        color: $electricBlueLight;
+    }
 }

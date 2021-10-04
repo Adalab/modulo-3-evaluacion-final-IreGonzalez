@@ -1,12 +1,15 @@
+@import 'Variables.scss';
+
 .list__element{
     width: 320px;
-    border: solid 1px rgb(5, 160, 0);
+    border: solid 1px $electricGreenDark;
     border-radius: 10px;
     margin-bottom: 15px;
-    // @include flexColumnCenter;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexColumnCenter;
+    &:hover{
+        border: solid 1px $electricGreenYellow;
+    }
+
     @media (min-width: 768px){
         grid-column: span 1;
         margin: auto;
@@ -15,8 +18,9 @@
         margin: 10px;
     }
     &--text{
-       color: rgb(9, 255, 0);
+       color: $electricGreen;
        margin-bottom: 10px;
+       text-align: center;
     }
 }
 .name{
