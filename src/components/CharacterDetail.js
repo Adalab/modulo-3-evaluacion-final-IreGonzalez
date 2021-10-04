@@ -11,7 +11,7 @@ const CharacterDetail = (props) => {
             <section className="alternative">
                 <h2>¡¡Eh!!</h2>
                 <p> ¡¡Esta no es su serie!!</p>
-                <Link to="/"><i className="fas fa-level-up-alt" /></Link>
+                <Link to="/"><i className="fas fa-level-up-alt back" /></Link>
             </section>
         )
     }

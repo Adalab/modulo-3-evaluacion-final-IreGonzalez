@@ -33,3 +33,8 @@
 .alternative{
     @include alternative;
 }
+.fas{
+    color: $electricGreen;
+    transform: scale(150%);
+    margin-left: 10px;
+}
