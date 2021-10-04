@@ -9,7 +9,11 @@ const CharacterDetail = (props) => {
     console.log(props.characterData);
     if (props.characterData === undefined) {
         return (
-            <Alternative />
+            <section className="alternative">
+                <h2 className="alternative__insult">¡¡Eh!!</h2>
+                <p className="alternative__text">¡¡Metete con un personaje de esta serie!!</p>
+                <Link to="/"><i class="return fas fa-backspace" /></Link>
+            </section>
         )
     }
     else {
