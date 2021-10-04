@@ -8,6 +8,8 @@
     @include flexColumnCenter;
     &:hover{
         border: solid 1px $electricGreenYellow;
+        color: $electricGreenYellow;
+        font-weight:bold;
     }
 
     @media (min-width: 768px){
@@ -33,7 +35,7 @@
 .alternative{
     @include alternative;
 }
-.fas{
+.status{
     color: $electricGreen;
     transform: scale(150%);
     margin-left: 10px;

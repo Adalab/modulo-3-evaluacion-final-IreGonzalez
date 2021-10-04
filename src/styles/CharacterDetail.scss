@@ -25,7 +25,11 @@
 }
 
 .back{
-    @include back;
+    @include fas;
+    transform:rotate(-90deg) scale(150%);
+    &:hover{
+        color: $electricBlue;
+    }
 }
 
 .alternative{

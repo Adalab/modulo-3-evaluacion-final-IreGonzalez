@@ -2,7 +2,7 @@
 
 .label{
 @include filters;
-    color: $electricBlue;
+    color: $electricBlueLight;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,7 +10,9 @@
 .select{
     background-color: $electricGreenDark;
     text-align: end;
+    font-size: 15px;
+    padding: 2px;
     &:hover{
-        color: $electricBlueLight;
+        color: $electricBlue;
     }
 }

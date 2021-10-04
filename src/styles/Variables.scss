@@ -24,15 +24,16 @@ $electricGreenYellow: rgb(123, 255, 0);
     font-size: 20px;
 }
 
-@mixin back{
-    color: $electricGreenDark;
-    transform:rotate(-90deg) scale(150%);
+@mixin fas{
+    color: $electricGreen;
     margin-bottom: 10px;
-    &:hover{
-        color: $electricBlue;
-    }
+    
 }
 
 @mixin alternative{
-    color: $electricGreenDark
+    margin: 10px;
+    font-size: 50px;
+    text-align: center;
+    border: solid 2px $electricGreenDark;
+    color: $electricBlue;
 }

@@ -19,7 +19,7 @@ const CharacterList = (props) => {
         return (
             <section className="alternative">
                 <h2>¡¡Eh!!</h2>
-                <p> ¡¡Esta no es su serie!!</p>
+                <p>¡¡Mete unos datos que sean correctos!!</p>
             </section>
         )
     }

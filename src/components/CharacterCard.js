@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 const CharacterCard = (props) => {
     let status = "";
     if (props.characterData.status === "Dead") {
-        status = <i className="fas fa-dizzy"></i>
+        status = <i className="status fas fa-dizzy"></i>
     }
     if (props.characterData === undefined) {
         return (
             <section className="alternative">
                 <h2>¡¡Eh!!</h2>
-                <p> ¡¡Esta no es su serie!!</p>
+                <p> ¡¡¡¡Mete unos datos que sean correctos!!!!</p>
             </section>
         )
     }

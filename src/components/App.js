@@ -3,7 +3,6 @@ import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 // SERVIVICES
 import callToApi from '../services/api.js'
-import ls from '../services/local-storage'
 // STYLESHEET
 import '../styles/Reset.scss';
 import '../styles/Variables.scss';
@@ -19,7 +18,10 @@ import CharacterDetail from './CharacterDetail';
 function App() {
   const [data, setData] = useState([]);
   const [inputName, setInputName] = useState('');
-  const [select, setSelect] = useState('all');
+  const [selectGender, setSelectGender] = useState('all');
+  const [selectSpecies, setSelectSpecies] = useState('all');
+  const [selectOrigin, setSelectOrigin] = useState('all');
+  const [selectStatus, setSelectStatus] = useState('all');
 
   useEffect(() => {
     callToApi()
@@ -33,8 +35,17 @@ function App() {
     setInputName(ev.currentTarget.value)
   };
 
-  const handleSelect = (ev) => {
-    setSelect(ev.currentTarget.value)
+  const handleSelectGender = (ev) => {
+    setSelectGender(ev.currentTarget.value)
+  }
+  const handleSelectSpecies = (ev) => {
+    setSelectSpecies(ev.currentTarget.value)
+  }
+  const handleSelectOrigin = (ev) => {
+    setSelectOrigin(ev.currentTarget.value)
+  }
+  const handleSelectStatus = (ev) => {
+    setSelectStatus(ev.currentTarget.value)
   }
 
   // LIST TO OPTIONS
@@ -64,10 +75,11 @@ function App() {
   const filteredData = data
     .filter((character) => character.name.toLocaleLowerCase().includes(inputName.toLocaleLowerCase()))
     .filter((character) =>
-      select === 'all' ||
-      select === character.species ||
-      select === character.gender ||
-      select === character.status);
+      selectGender === 'all' ||
+      selectGender === character.gender ||
+      selectSpecies === character.species ||
+      selectOrigin === character.status ||
+      selectStatus === character.origin);
 
   return (
     <div className="App">
@@ -80,13 +92,19 @@ function App() {
             <Filters
               inputName={inputName}
               handleInput={handleInput}
-              select={select}
-              handleSelect={handleSelect}
               filteredData={filteredData}
               genderUniqueList={genderUniqueList}
+              selectGender={selectGender}
+              handleSelectGender={handleSelectGender}
               speciesUniqueList={speciesUniqueList}
+              selectSpecies={selectSpecies}
+              handleSelectSpecies={handleSelectSpecies}
               originUniqueList={originUniqueList}
+              selectOrigin={selectOrigin}
+              handleSelectOrigin={handleSelectOrigin}
               statusUniqueList={statusUniqueList}
+              selectStatus={selectStatus}
+              handleSelectStatus={handleSelectStatus}
             />
             <CharacterList list={filteredData} />
           </Route>
@@ -95,7 +113,8 @@ function App() {
           </Route>
           <Route>
             <section className="alternative">
-              Aquí no hay nada!
+              <h2>¡¡Eh!!</h2>
+              <p>¡¡Mete unos datos que sean correctos!!</p>
             </section>
           </Route>
         </Switch>
