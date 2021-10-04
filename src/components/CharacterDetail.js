@@ -23,7 +23,7 @@ const CharacterDetail = (props) => {
                     alt={props.characterData.name}
                     title={props.characterData.name}
                 />
-                <div >
+                <div className="text">
                     <h1 className="detail__name">
                         {props.characterData.name}
                     </h1>
@@ -44,8 +44,8 @@ const CharacterDetail = (props) => {
                             Estado: {props.characterData.status}
                         </li>
                     </ul>
+                    <Link to="/"><i className="back fas fa-level-up-alt" /></Link>
                 </div>
-                <Link to="/"><i className="back fas fa-level-up-alt" /></Link>
             </section>
         );
     };
