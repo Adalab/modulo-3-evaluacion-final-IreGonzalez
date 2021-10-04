@@ -10,8 +10,8 @@ const Select = (props) => {
     console.log(props.filteredData);
     return (
         <>
-            <label htmlFor="gender" className="label">Género:
-                <select name="gender" value={props.select} onChange={props.handleSelect}>
+            <label htmlFor="gender" className="label">Filtra por género:
+                <select className="select" name="gender" value={props.select} onChange={props.handleSelect}>
                     <Option value="all" name="Todos" />
                     <Option value="Male" name="Hombre" />
                     <Option value="Female" name="Mujer" />
@@ -19,16 +19,16 @@ const Select = (props) => {
                 </select>
             </label>
 
-            <label htmlFor="species" className="label">Especie:
-                <select name="species" value={props.select} onChange={props.handleSelect}>
+            <label htmlFor="species" className="label">Filtra por especie:
+                <select className="select" name="species" value={props.select} onChange={props.handleSelect}>
                     <Option value="all" name="Todos" />
                     <Option value="Human" name="Humano" />
                     <Option value="Alien" name="Alien" />
                 </select>
             </label>
 
-            <label htmlFor="status" className="label">Estado:
-                <select name="status" value={props.select} onChange={props.handleSelect}>
+            <label htmlFor="status" className="label">Filtra según vitalidad:
+                <select className="select" name="status" value={props.select} onChange={props.handleSelect}>
                     <Option value="all" name="Todos" />
                     <Option value="Alive" name="Vivo" />
                     <Option value="Dead" name="Muerto" />

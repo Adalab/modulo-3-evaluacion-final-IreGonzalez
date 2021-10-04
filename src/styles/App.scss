@@ -1,3 +1,4 @@
+@import 'Variables.scss';
 
 body{
     background-color: black;
@@ -5,10 +6,7 @@ body{
 }
 
 .header{
-    // @include flexColumnCenter;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexColumnCenter;
     @media (min-width: 768px){
         margin-bottom: 50px;
     }
@@ -24,15 +22,16 @@ body{
 }
 
 .main{
-    // @include flexColumnCenter;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    @include flexColumnCenter;
 
-.form{
-    // @include flexColumnCenter;
+}
+.footer{
+    height: 100px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    margin: 10px 10px;
+    border-top: solid 1px $electricGreenDark;
+    color: $electricBlue;
+    text-align: right;
 }

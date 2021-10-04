@@ -1,10 +1,10 @@
 import '../styles/Variables.scss';
-import '../styles/Filters.scss';
+import '../styles/Input.scss';
 
 const Input = (props) => {
     return (
         <input
-            className="form__input"
+            className="input"
             type="text"
             placeholder="Introduce tu búsqueda"
             value={props.value}

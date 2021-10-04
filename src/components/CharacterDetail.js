@@ -5,6 +5,7 @@ import '../styles/CharacterDetail.scss';
 
 
 const CharacterDetail = (props) => {
+    console.log(props.characterData);
     return (
         <section className="detail"
             id={props.characterData.id}
@@ -15,7 +16,6 @@ const CharacterDetail = (props) => {
                 alt={props.characterData.name}
                 title={props.characterData.name}
             />
-            <Link to="/">Back</Link>
             <div >
                 <h1 className="detail__name">
                     {props.characterData.name}
@@ -28,16 +28,17 @@ const CharacterDetail = (props) => {
                         Género: {props.characterData.gender}
                     </li>
                     <li className="detail__text--line">
-                        Origen: {props.characterData.origin.name}
+                        Origen: {props.characterData.origin}
+                    </li>
+                    <li className="detail__text--line">
+                        Episodios: {props.characterData.episode}
                     </li>
                     <li className="detail__text--line">
                         Estado: {props.characterData.status}
                     </li>
-                    <li className="detail__text--line">
-                        Episodios: {props.characterData.episode.length}
-                    </li>
                 </ul>
             </div>
+            <Link to="/"><i className="fas fa-level-up-alt" /></Link>
         </section>
     );
 };

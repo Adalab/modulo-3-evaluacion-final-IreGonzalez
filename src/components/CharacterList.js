@@ -7,7 +7,8 @@ import '../styles/CharacterList.scss';
 const CharacterList = (props) => {
     const html = props.list.map(
         (characterData) => {
-            if (props.list.length === 0) {
+            console.log('list', props.list);
+            if (props.list === []) {
                 return (
                     <section className="alternative">
                         <h2>¡¡Eh!!</h2>
