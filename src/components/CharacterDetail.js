@@ -6,7 +6,14 @@ import Alternative from "./Alternative";
 
 
 const CharacterDetail = (props) => {
-    console.log(props.characterData);
+    let status = "";
+    if (props.characterData.status === "Dead") {
+        status = <i className="status fas fa-dizzy" />
+    } else if (props.characterData.status === "Alive") {
+        status = <i class="fas fa-heartbeat" />
+    } else {
+        status = <i class="far fa-question-circle" />
+    }
     if (props.characterData === undefined) {
         return (
             <section className="alternative">
@@ -42,10 +49,10 @@ const CharacterDetail = (props) => {
                             Origen: {props.characterData.origin}
                         </li>
                         <li className="detail__text--line">
-                            Episodios: {props.characterData.episode}
+                            Nº Episodios: {props.characterData.episode}
                         </li>
                         <li className="detail__text--line">
-                            Estado: {props.characterData.status}
+                            Salud: {status}
                         </li>
                     </ul>
                     <Link to="/"><i className="back fas fa-level-up-alt" /></Link>

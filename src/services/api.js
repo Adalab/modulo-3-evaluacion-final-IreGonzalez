@@ -2,7 +2,7 @@
 const callToApi = () => {
 
     return (
-        fetch('https://rickandmortyapi.com/api/character')
+        fetch('https://rickandmortyapi.com/api/character/?page=2')
             .then(response => response.json())
             .then(list => {
                 return (list.results.map(character => {
