@@ -1,6 +1,7 @@
 const Option = (props) => {
+
     return (
-        <option value={props.value}>{props.name}</option>
+        <option value={props.option}>{props.option}</option>
     );
 };
 

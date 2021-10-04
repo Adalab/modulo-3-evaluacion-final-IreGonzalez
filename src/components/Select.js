@@ -3,39 +3,24 @@ import Option from './Option';
 // STYLESHEET
 import '../styles/Variables.scss';
 import '../styles/Select.scss';
-// Debo hacer un map  e incorporar como en la lista de favoritos del ejercicio 2  para que pinte solo las opciones de cada uno de los tipos de selector.
-// Se podría añadir el planeta de origen
+
 const Select = (props) => {
+    const html = props.uniqueList.map(
+        (options, index) => {
+            return (
+                <Option option={options} key={index} />
+            )
+        }
+    )
 
-    console.log(props.filteredData);
     return (
-        <>
-            <label htmlFor="gender" className="label">Filtra por género:
-                <select className="select" name="gender" value={props.select} onChange={props.handleSelect}>
-                    <Option value="all" name="Todos" />
-                    <Option value="Male" name="Hombre" />
-                    <Option value="Female" name="Mujer" />
-                    <Option value="unknown" name="Desconocido" />
-                </select>
-            </label>
-
-            <label htmlFor="species" className="label">Filtra por especie:
-                <select className="select" name="species" value={props.select} onChange={props.handleSelect}>
-                    <Option value="all" name="Todos" />
-                    <Option value="Human" name="Humano" />
-                    <Option value="Alien" name="Alien" />
-                </select>
-            </label>
-
-            <label htmlFor="status" className="label">Filtra según vitalidad:
-                <select className="select" name="status" value={props.select} onChange={props.handleSelect}>
-                    <Option value="all" name="Todos" />
-                    <Option value="Alive" name="Vivo" />
-                    <Option value="Dead" name="Muerto" />
-                </select>
-            </label>
-        </>
+        <label htmlFor={props.select} className="label">Filtra por {props.name}:
+            <select className="select" name={props.select} value={props.select} onChange={props.handleSelect}>
+                <option value="all">All</option>
+                {html}
+            </select>
+        </label>
     );
 };
 
-export default Select
+export default Select;

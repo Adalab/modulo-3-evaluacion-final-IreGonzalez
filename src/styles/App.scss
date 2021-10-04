@@ -35,3 +35,7 @@ body{
     color: $electricBlue;
     text-align: right;
 }
+
+.alternative{
+    @include alternative;
+}

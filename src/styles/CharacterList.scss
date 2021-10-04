@@ -1,3 +1,5 @@
+@import 'Variables.scss';
+
 .list{
     margin-top: 40px;
     @media (min-width: 768px){
@@ -8,4 +10,7 @@
     @media (min-width: 1200px){
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+.alternative{
+    @include alternative;
 }
