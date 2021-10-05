@@ -1,0 +1,10 @@
+@import 'Variables.scss';
+
+.button{
+    @include filters;
+    color: $electricBlueLight;
+    &:hover{
+        color: $electricGreen;
+        background-color: $electricBlueLight;
+    }
+}

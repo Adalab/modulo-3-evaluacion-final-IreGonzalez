@@ -31,40 +31,6 @@ function App() {
       });
   }, []);
 
-  const handleInput = (ev) => {
-    ev.preventDefault()
-    setInputName(ev.currentTarget.value)
-  };
-
-  const handleSelectGender = (ev) => {
-    setSelectGender(ev.currentTarget.value)
-  };
-  const handleSelectSpecies = (ev) => {
-    setSelectSpecies(ev.currentTarget.value)
-  };
-  const handleSelectOrigin = (ev) => {
-    setSelectOrigin(ev.currentTarget.value)
-  };
-  const handleSelectStatus = (ev) => {
-    setSelectStatus(ev.currentTarget.value)
-  };
-
-  // LIST TO OPTIONS
-  const genderList = data.map((c) => c.gender);
-  const genderUniqueList = genderList
-    .filter((g, i) => genderList.indexOf(g) === i);
-
-  const speciesList = data.map((c) => c.species);
-  const speciesUniqueList = speciesList
-    .filter((s, i) => speciesList.indexOf(s) === i);
-
-  const originList = data.map((c) => c.origin);
-  const originUniqueList = originList
-    .filter((o, i) => originList.indexOf(o) === i);
-
-  const statusList = data.map((c) => c.status);
-  const statusUniqueList = statusList
-    .filter((st, i) => statusList.indexOf(st) === i);
 
   // ROUTE TO CHARACTER DETAIL
   const routeData = useRouteMatch("/character/:id");
@@ -93,20 +59,17 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Filters
+              data={data}
               inputName={inputName}
-              handleInput={handleInput}
-              genderUniqueList={genderUniqueList}
+              setInputName={setInputName}
               selectGender={selectGender}
-              handleSelectGender={handleSelectGender}
-              speciesUniqueList={speciesUniqueList}
+              setSelectGender={setSelectGender}
               selectSpecies={selectSpecies}
-              handleSelectSpecies={handleSelectSpecies}
-              originUniqueList={originUniqueList}
+              setSelectSpecies={setSelectSpecies}
               selectOrigin={selectOrigin}
-              handleSelectOrigin={handleSelectOrigin}
-              statusUniqueList={statusUniqueList}
+              setSelectOrigin={setSelectOrigin}
               selectStatus={selectStatus}
-              handleSelectStatus={handleSelectStatus}
+              setSelectStatus={setSelectStatus}
             />
             <CharacterList list={filteredData} />
           </Route>
