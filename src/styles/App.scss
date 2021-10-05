@@ -1,18 +1,16 @@
 @import 'Variables.scss';
 
 body{
-    @include flexColumnCenter;
     background-color: black;
-    height: 100vh;
 }
 
 .header{
     @include flexColumnCenter;
     @media (min-width: 768px){
-        margin-bottom: 50px;
+        margin-bottom: 3em;
     }
     &__img{
-    transform: scale(60%);
+    max-width: 90%;
     @media (min-width: 768px){
         transform: scale(100%);
     }
@@ -22,17 +20,17 @@ body{
     }
 }
 }
-
 .main{
     @include flexColumnCenter;
-
 }
+
 .footer{
-    height: 100px;
+    margin-right: 1em;
+    margin-left: 1em;
+    height: 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 10px 10px;
     border-top: solid 1px $electricGreenDark;
     color: $electricBlueLight;
     text-align: right;

@@ -14,7 +14,7 @@ const Select = (props) => {
     )
 
     return (
-        <label htmlFor={props.select} className="label">Filtra por {props.name}:
+        <label htmlFor={props.select} className="label">{props.name}:
             <select className="select" name={props.select} value={props.select} onChange={props.handleSelect}>
                 <option value="all">All</option>
                 {html}
