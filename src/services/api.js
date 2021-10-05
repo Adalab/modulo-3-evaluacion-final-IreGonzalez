@@ -1,7 +1,7 @@
 
-const callToApi = () => {
+const callToApi = (op) => {
     return (
-        fetch('https://rickandmortyapi.com/api/character/?page=4')
+        fetch(`https://rickandmortyapi.com/api/character/?page=${op}`)
             .then(response => response.json())
             .then(list => {
                 return (list.results.map(character => {

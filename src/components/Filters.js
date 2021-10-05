@@ -12,7 +12,6 @@ const Filters = (props) => {
         ev.preventDefault()
         props.setInputName(ev.currentTarget.value)
     };
-
     const handleSelectGender = (ev) => {
         props.setSelectGender(ev.currentTarget.value)
     };

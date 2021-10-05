@@ -24,9 +24,10 @@ function App() {
   const [selectSpecies, setSelectSpecies] = useState('all');
   const [selectOrigin, setSelectOrigin] = useState('all');
   const [selectStatus, setSelectStatus] = useState('all');
+  const [op, setOp] = useState(1);
 
   useEffect(() => {
-    callToApi()
+    callToApi(op)
       .then(initialData => {
         setData(initialData);
       });

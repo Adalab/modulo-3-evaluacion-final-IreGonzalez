@@ -3,8 +3,11 @@
 .button{
     @include filters;
     color: $electricBlueLight;
-    &:hover{
+    @media (min-width:180px){
+        &:hover{
         color: $electricGreen;
         background-color: $electricBlueLight;
     }
+    }
+    
 }
