@@ -51,19 +51,25 @@ const Filters = (props) => {
         props.setSelectStatus('all')
     };
     const handleGo = () => {
-
+        if (props.op <= 34) {
+            props.setOp(props.op + 1);
+            console.log(props.op);
+        }
     };
     const handleBack = () => {
-
+        if (props.op > 0) {
+            props.setOp(props.op - 1);
+            console.log(props.op)
+        }
     };
 
     return (
         <form className="form">
             <Input value={props.inputName} handleInput={handleInput} />
             <div className="line__buttons">
-                <Button handleclick={handleGo} text={<i class="fas fa-reply" />} />
+                <Button handleclick={handleBack} text={<i class="fas fa-reply" />} />
                 <Button handleclick={handleReset} text={"Reset"} />
-                <Button handleclick={handleBack} text={<i class="fas fa-share" />} />
+                <Button handleclick={handleGo} text={<i class="fas fa-share" />} />
             </div>
             <Select
                 name="Género"

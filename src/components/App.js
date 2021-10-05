@@ -31,7 +31,7 @@ function App() {
       .then(initialData => {
         setData(initialData);
       });
-  }, []);
+  }, [op]);
 
   // ROUTE TO CHARACTER DETAIL
   const routeData = useRouteMatch("/character/:id");
@@ -61,6 +61,8 @@ function App() {
           <Route exact path="/">
             <Filters
               data={data}
+              op={op}
+              setOp={setOp}
               inputName={inputName}
               setInputName={setInputName}
               selectGender={selectGender}
