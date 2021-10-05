@@ -1,6 +1,5 @@
 import '../styles/Variables.scss';
 import '../styles/Alternative.scss';
-import { Link } from 'react-router-dom';
 
 const Alternative = () => {
     return (

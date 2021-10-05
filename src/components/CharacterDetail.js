@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 // STYLESHEET
 import '../styles/Variables.scss';
 import '../styles/CharacterDetail.scss';
-import Alternative from "./Alternative";
 
 
 const CharacterDetail = (props) => {

@@ -3,7 +3,6 @@ import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 // SERVIVICES
 import callToApi from '../services/api.js'
-import ls from '../services/local-storage.js'
 // STYLESHEET
 import '../styles/Reset.scss';
 import '../styles/Variables.scss';
