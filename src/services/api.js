@@ -1,8 +1,7 @@
 
 const callToApi = () => {
-
     return (
-        fetch('https://rickandmortyapi.com/api/character/?page=2')
+        fetch('https://rickandmortyapi.com/api/character/?page=4')
             .then(response => response.json())
             .then(list => {
                 return (list.results.map(character => {

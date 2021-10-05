@@ -10,3 +10,13 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+.line__buttons{
+    display:flex;
+        @media (min-width: 768px){
+        grid-column: span 2;
+    }
+    @media (min-width: 1200px){
+        grid-column: span 4;
+    }
+}

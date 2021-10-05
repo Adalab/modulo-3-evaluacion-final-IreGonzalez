@@ -16,7 +16,6 @@ const CharacterList = (props) => {
             )
         });
     if (props.list.length === 0) {
-        console.log(props.list.length);
         return (
             <Alternative />
         )
