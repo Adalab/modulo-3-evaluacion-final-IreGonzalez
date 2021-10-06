@@ -12,35 +12,6 @@ const Filters = (props) => {
         ev.preventDefault()
         props.setInputName(ev.currentTarget.value)
     };
-    const handleSelectGender = (ev) => {
-        props.setSelectGender(ev.currentTarget.value)
-    };
-    const handleSelectSpecies = (ev) => {
-        props.setSelectSpecies(ev.currentTarget.value)
-    };
-    const handleSelectOrigin = (ev) => {
-        props.setSelectOrigin(ev.currentTarget.value)
-    };
-    const handleSelectStatus = (ev) => {
-        props.setSelectStatus(ev.currentTarget.value)
-    };
-
-    // LIST TO OPTIONS
-    const genderList = props.data.map((c) => c.gender);
-    const genderUniqueList = genderList
-        .filter((g, i) => genderList.indexOf(g) === i);
-
-    const speciesList = props.data.map((c) => c.species);
-    const speciesUniqueList = speciesList
-        .filter((s, i) => speciesList.indexOf(s) === i);
-
-    const originList = props.data.map((c) => c.origin);
-    const originUniqueList = originList
-        .filter((o, i) => originList.indexOf(o) === i);
-
-    const statusList = props.data.map((c) => c.status);
-    const statusUniqueList = statusList
-        .filter((st, i) => statusList.indexOf(st) === i);
 
     const handleReset = (ev) => {
         ev.preventDefault()
@@ -74,26 +45,30 @@ const Filters = (props) => {
             <Select
                 name="Género"
                 select={props.selectGender}
-                handleSelect={handleSelectGender}
-                uniqueList={genderUniqueList}
+                setSelect={props.setSelectGender}
+                listSelector={'gender'}
+                data={props.data}
             />
             <Select
                 name="Especie"
                 select={props.selectSpecies}
-                handleSelect={handleSelectSpecies}
-                uniqueList={speciesUniqueList}
+                setSelect={props.setSelectSpecies}
+                listSelector={'species'}
+                data={props.data}
             />
             <Select
                 name="Origen"
                 select={props.selectOrigin}
-                handleSelect={handleSelectOrigin}
-                uniqueList={originUniqueList}
+                setSelect={props.setSelectOrigin}
+                listSelector={'origin'}
+                data={props.data}
             />
             <Select
                 name="Estado"
                 select={props.selectStatus}
-                handleSelect={handleSelectStatus}
-                uniqueList={statusUniqueList}
+                setSelect={props.setSelectStatus}
+                listSelector={'status'}
+                data={props.data}
             />
         </form>
     );
