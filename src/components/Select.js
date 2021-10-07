@@ -6,9 +6,9 @@ import '../styles/Select.scss';
 
 const Select = (props) => {
 
-    const list = props.data.map((c) => `c.${props.listSelector}`);
+    const list = props.data.map((c) => c.{ props.listSelector });
     const uniqueList = list
-        .filter((g, i) => list.indexOf(g) === i);
+        .filter((e, i) => list.indexOf(e) === i);
 
     const html = list.map(
         (options, index) => {

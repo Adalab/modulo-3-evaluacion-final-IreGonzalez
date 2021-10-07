@@ -21,13 +21,15 @@ const Filters = (props) => {
         props.setSelectOrigin('all');
         props.setSelectStatus('all')
     };
-    const handleGo = () => {
+    const handleGo = (ev) => {
+        ev.preventDefault()
         if (props.op <= 34) {
             props.setOp(props.op + 1);
             console.log(props.op);
         }
     };
-    const handleBack = () => {
+    const handleBack = (ev) => {
+        ev.preventDefault()
         if (props.op > 0) {
             props.setOp(props.op - 1);
             console.log(props.op)
