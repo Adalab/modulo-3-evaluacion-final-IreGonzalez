@@ -6,11 +6,11 @@ import '../styles/Select.scss';
 
 const Select = (props) => {
 
-    const list = props.data.map((c) => c.{ props.listSelector });
+    const list = props.data.map((c) => c[props.listSelector]);
     const uniqueList = list
         .filter((e, i) => list.indexOf(e) === i);
 
-    const html = list.map(
+    const html = uniqueList.map(
         (options, index) => {
             return (
                 <Option option={options} key={index} />
