@@ -8,7 +8,7 @@ import '../styles/Reset.scss';
 import '../styles/Variables.scss';
 import '../styles/App.scss';
 // IMAGES
-import title from '../images/Rick_and_Morty_-_logo_(English).png'
+import title from '../images/lord-of-the-rings-logo-png-file.png'
 // COMPONENTS
 import Filters from './Filters';
 import CharacterList from './CharacterList';
@@ -25,11 +25,23 @@ function App() {
   const [selectStatus, setSelectStatus] = useState('all');
   const [op, setOp] = useState(1);
 
+
+  // useEffect(() => {
+  //   callToApi(op)
+  //     .then(initialData => {
+  //       setData(initialData);
+  //     });
+  // }, [op]);
   useEffect(() => {
-    callToApi(op)
-      .then(initialData => {
-        setData(initialData);
-      });
+    const headers = {
+      'Accept': 'application/json',
+      'Authorization': 'Bearer 8Pdh9xgb08StIcDZ2T1u'
+    }
+
+    callToApi(headers,op)
+      // .then(initialData => {
+      //   setData(initialData);
+      // });
   }, [op]);
 
   // ROUTE TO CHARACTER DETAIL
@@ -85,7 +97,7 @@ function App() {
       </main>
       <footer className="footer">
         <h6>&copy;2021</h6>
-        <h6>By IreGonzalez To Adalab</h6>
+        <h6>By IreGonzalez</h6>
       </footer>
     </div >
   );

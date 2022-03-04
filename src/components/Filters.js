@@ -40,9 +40,9 @@ const Filters = (props) => {
         <form className="form">
             <Input value={props.inputName} handleInput={handleInput} />
             <div className="line__buttons">
-                <Button handleclick={handleBack} text={<i class="fas fa-reply" />} />
+                <Button handleclick={handleBack} text={<i className="fas fa-reply" />} />
                 <Button handleclick={handleReset} text={"Reset"} />
-                <Button handleclick={handleGo} text={<i class="fas fa-share" />} />
+                <Button handleclick={handleGo} text={<i className="fas fa-share" />} />
             </div>
             <Select
                 name="Género"
