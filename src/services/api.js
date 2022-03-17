@@ -3,8 +3,9 @@ const callToApi = (op) => {
     return (
         fetch(`https://rickandmortyapi.com/api/character/?page=${op}`)
             .then(response => response.json())
-            .then(list => {
-                return (list.results.map(character => {
+            .then(list => {console.log(list);
+                return (list.docs
+                    .map(character => {
                     return {
                         id: character.id,
                         photo: character.image,
@@ -16,8 +17,8 @@ const callToApi = (op) => {
                         episode: character.episode.length
                     }
                 }))
-            })
-    );
+            }
+    ))
 };
 
 

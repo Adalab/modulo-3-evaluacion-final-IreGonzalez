@@ -27,12 +27,19 @@ function App() {
   const [op, setOp] = useState(1);
 
   useEffect(() => {
+<<<<<<< HEAD
     callToApi(op)
       .then(initialData => {
         setData(initialData);
       });
+=======
+    const headers = {
+      'Accept': 'application/json',
+      'Authorization': 'Bearer 8Pdh9xgb08StIcDZ2T1u'
+    }
+    callToApi(headers,op);
+>>>>>>> f9b2d5b (trying change API)
   }, [op]);
-
   // ROUTE TO CHARACTER DETAIL
   const routeData = useRouteMatch("/character/:id");
   const characterId = (routeData !== null ? routeData.params.id : '');
