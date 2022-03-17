@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 // STYLESHEET
 import '../styles/Variables.scss';
 import '../styles/CharacterDetail.scss';
-import Alternative from "./Alternative";
 
 
 const CharacterDetail = (props) => {
@@ -10,16 +9,16 @@ const CharacterDetail = (props) => {
     if (props.characterData.status === "Dead") {
         status = <i className="status fas fa-dizzy" />
     } else if (props.characterData.status === "Alive") {
-        status = <i class="fas fa-heartbeat" />
+        status = <i className="fas fa-heartbeat" />
     } else {
-        status = <i class="far fa-question-circle" />
+        status = <i className="far fa-question-circle" />
     }
     if (props.characterData === undefined) {
         return (
             <section className="alternative">
                 <h2 className="alternative__insult">¡¡Eh!!</h2>
                 <p className="alternative__text">¡¡Metete con un personaje de esta serie!!</p>
-                <Link to="/"><i class="return fas fa-backspace" /></Link>
+                <Link to="/"><i className="return fas fa-backspace" /></Link>
             </section>
         )
     }
