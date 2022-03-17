@@ -37,13 +37,8 @@ function App() {
       'Accept': 'application/json',
       'Authorization': 'Bearer 8Pdh9xgb08StIcDZ2T1u'
     }
-
-    callToApi(headers,op)
-      // .then(initialData => {
-      //   setData(initialData);
-      // });
+    callToApi(headers,op);
   }, [op]);
-
   // ROUTE TO CHARACTER DETAIL
   const routeData = useRouteMatch("/character/:id");
   const characterId = (routeData !== null ? routeData.params.id : '');

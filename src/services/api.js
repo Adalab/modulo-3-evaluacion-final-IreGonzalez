@@ -26,8 +26,9 @@ const callToApi = async (headers,op) => {
       .then (response => response.json())
       .then (fetch(`https://the-one-api.dev/v2/character?page=${op}`, {headers: headers})
             .then(response => response.json())
-            .then(list => {
-                return (list.docs.map(character => {console.log(character);
+            .then(list => {console.log(list);
+                return (list.docs
+                    .map(character => {
                     return {
                         id: character._id,
                         name: character.name,
@@ -38,7 +39,7 @@ const callToApi = async (headers,op) => {
                     }
                 }))
             }
-    ));
+    ))
 };
 
 export default callToApi;
