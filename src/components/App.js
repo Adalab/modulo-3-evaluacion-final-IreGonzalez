@@ -1,6 +1,7 @@
 // HOOKS
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import initialData from '../services/response.json';
 // SERVIVICES
 import callToApi from '../services/api.js'
 // STYLESHEET
@@ -17,7 +18,7 @@ import Alternative from './Alternative.js';
 
 
 function App() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(initialData);
   const [inputName, setInputName] = useState('');
   const [selectGender, setSelectGender] = useState('all');
   const [selectSpecies, setSelectSpecies] = useState('all');
@@ -25,25 +26,30 @@ function App() {
   const [selectStatus, setSelectStatus] = useState('all');
   const [op, setOp] = useState(1);
 
-
+// API RICK Y MORTY
   // useEffect(() => {
   //   callToApi(op)
   //     .then(initialData => {
   //       setData(initialData);
   //     });
   // }, [op]);
-  useEffect(() => {
-    const headers = {
-      'Accept': 'application/json',
-      'Authorization': 'Bearer 8Pdh9xgb08StIcDZ2T1u'
-    }
-    callToApi(headers,op);
-  }, [op]);
+
+// API SDLA
+  // useEffect(() => {
+  //   const headers = {
+  //     'Accept': 'application/json',
+  //     'Authorization': 'Bearer 8Pdh9xgb08StIcDZ2T1u'
+  //   }
+  //   callToApi(headers,op)
+  //   .then(initialData=>{
+  //     setData(initialData);
+  //   });
+  // }, [op]);
   // ROUTE TO CHARACTER DETAIL
-  const routeData = useRouteMatch("/character/:id");
-  const characterId = (routeData !== null ? routeData.params.id : '');
-  const characterDetail = data
-    .find((character) => character.id === parseInt(characterId));
+  // const routeData = useRouteMatch("/character?_id");
+  // const characterId = (routeData !== null ? routeData.params.id : '');
+  // const characterDetail = data
+  //   .find((character) => character.id === parseInt(characterId));
 
   // FILTERS
   const filteredData = data
