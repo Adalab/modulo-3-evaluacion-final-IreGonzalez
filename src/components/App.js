@@ -25,15 +25,6 @@ function App() {
   const [selectStatus, setSelectStatus] = useState('all');
   const [op, setOp] = useState(1);
 
-<<<<<<< HEAD
-  useEffect(() => {
-<<<<<<< HEAD
-    callToApi(op)
-      .then(initialData => {
-        setData(initialData);
-      });
-=======
-=======
 
   // useEffect(() => {
   //   callToApi(op)
@@ -42,16 +33,11 @@ function App() {
   //     });
   // }, [op]);
   useEffect(() => {
->>>>>>> master
     const headers = {
       'Accept': 'application/json',
       'Authorization': 'Bearer 8Pdh9xgb08StIcDZ2T1u'
     }
     callToApi(headers,op);
-<<<<<<< HEAD
->>>>>>> f9b2d5b (trying change API)
-=======
->>>>>>> master
   }, [op]);
   // ROUTE TO CHARACTER DETAIL
   const routeData = useRouteMatch("/character/:id");
