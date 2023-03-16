@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'american';
+  src: url(./american/American.ttf);
+}
+
+@font-face {
+  font-family:'bilbo-hand-regular' ;
+  src: url(./bilbo-hand-font/BilboHandRegular-L3MZ.ttf);
+}
+
+
+@font-face {
+  font-family: 'bilbo-hand-fine';
+  src: url(./bilbo-hand-font/BilboHandFine-gxVR.ttf);
+}
+
+@font-face {
+  font-family: 'bilbo-hand-bold';
+  src: url(./bilbo-hand-font/BilboHandBoldBold-X3od.ttf);
+}
+
+@font-face {
+  font-family: ;
+  src: url();
+}
+
+@font-face {
+  font-family: ;
+  src: url();
+}
+
+@font-face {
+  font-family: 'tolkien';
+  src: url(./tolkien/tolkien.TTF);
+}

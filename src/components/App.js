@@ -32,18 +32,21 @@ function App() {
   //       setData(initialData);
   //     });
   // }, [op]);
+
   useEffect(() => {
     const headers = {
       'Accept': 'application/json',
       'Authorization': 'Bearer 8Pdh9xgb08StIcDZ2T1u'
     }
-    callToApi(headers,op);
+    callToApi(headers,op)
   }, [op]);
+
+
   // ROUTE TO CHARACTER DETAIL
   const routeData = useRouteMatch("/character/:id");
   const characterId = (routeData !== null ? routeData.params.id : '');
   const characterDetail = data
-    .find((character) => character.id === parseInt(characterId));
+    .find((character) => character.id === characterId);
 
   // FILTERS
   const filteredData = data
@@ -60,7 +63,7 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <img className="header__img" src={title} alt="Rick and Morty" />
+        <img className="header__img" src={title} alt="The lord of the rings" />
       </header>
       <main className="main">
         <Switch>
