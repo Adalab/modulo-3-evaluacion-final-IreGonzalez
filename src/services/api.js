@@ -1,3 +1,5 @@
+
+// API RICK Y MORTY
 // const callToApi = (op) => {
 //     return (
 //         fetch(`https://rickandmortyapi.com/api/character/?page=${op}`)
